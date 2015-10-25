@@ -9,10 +9,16 @@ package za.ac.cput.MobilePhones.conf.factory;
 /**
  * Created by Kristen on 25/10/2015.
  */
-public class OrdersFactory {
-
-    public static Orders createOrders(String orderStatus, String dateOrderPlaced, String dateOrderPaid, BigDecimal totalOrderPrice, List<OrderProduct> orderProductList) {
-        return new Orders.Builder(orderStatus).dateOrderPlaced(dateOrderPlaced).dateOrderPaid(dateOrderPaid).totalOrderPrice(totalOrderPrice).orderProductList(orderProductList).build();
+public class OrdersFactory
+{
+    public static Orders createOrders(String orderStatus, String dateOrderPlaced, String dateOrderPaid,
+                                      BigDecimal totalOrderPrice, List<OrderProduct> orderProductList)
+    {
+        return new Orders.Builder(orderStatus)
+                .dateOrderPlaced(dateOrderPlaced)
+                .dateOrderPaid(dateOrderPaid)
+                .totalOrderPrice(totalOrderPrice)
+                .orderProductList(orderProductList)
+                .build();
     }
-
 }

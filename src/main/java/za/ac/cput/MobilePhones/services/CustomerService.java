@@ -8,8 +8,7 @@ import java.util.List;
 /**
  * Created by student on 2015/10/18.
  */
-public interface CustomerService extends Services<Customer, Long>{
-
+public interface CustomerService extends Services<Customer, Long>
+{
     List<Orders> getOrders(Long id);
-
 }

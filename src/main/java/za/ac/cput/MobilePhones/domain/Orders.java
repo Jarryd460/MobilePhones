@@ -10,8 +10,8 @@ package za.ac.cput.MobilePhones.domain;
  */
 
 @Entity
-public class Orders implements Serializable{
-
+public class Orders implements Serializable
+{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -25,7 +25,8 @@ public class Orders implements Serializable{
 
     private Orders(){}
 
-    public Orders(Builder builder) {
+    public Orders(Builder builder)
+    {
         this.id = builder.id;
         this.orderStatus = builder.orderStatus;
         this.dateOrderPlaced = builder.dateOrderPlaced;
@@ -34,32 +35,38 @@ public class Orders implements Serializable{
         this.orderProductList = builder.orderProductList;
     }
 
-    public Long getId() {
+    public Long getId()
+    {
         return id;
     }
 
-    public String getOrderStatus() {
+    public String getOrderStatus()
+    {
         return orderStatus;
     }
 
-    public String getDateOrderPlaced() {
+    public String getDateOrderPlaced()
+    {
         return dateOrderPlaced;
     }
 
-    public String getDateOrderPaid() {
+    public String getDateOrderPaid()
+    {
         return dateOrderPaid;
     }
 
-    public BigDecimal getTotalOrderPrice() {
+    public BigDecimal getTotalOrderPrice()
+    {
         return totalOrderPrice;
     }
 
-    public List<OrderProduct> getOrderProductList() {
+    public List<OrderProduct> getOrderProductList()
+    {
         return orderProductList;
     }
 
-    public static class Builder {
-
+    public static class Builder
+    {
         private Long id;
         private String orderStatus;
         private String dateOrderPlaced;
@@ -67,41 +74,49 @@ public class Orders implements Serializable{
         private BigDecimal totalOrderPrice;
         private List<OrderProduct> orderProductList;
 
-        public Builder(String orderStatus) {
+        public Builder(String orderStatus)
+        {
             this.orderStatus = orderStatus;
         }
 
-        public Builder id(Long id) {
+        public Builder id(Long id)
+        {
             this.id = id;
             return this;
         }
 
-        public Builder orderStatus(String orderStatus) {
+        public Builder orderStatus(String orderStatus)
+        {
             this.orderStatus = orderStatus;
             return this;
         }
 
-        public Builder dateOrderPlaced(String dateOrderPlaced) {
+        public Builder dateOrderPlaced(String dateOrderPlaced)
+        {
             this.dateOrderPlaced = dateOrderPlaced;
             return this;
         }
 
-        public Builder dateOrderPaid(String dateOrderPaid) {
+        public Builder dateOrderPaid(String dateOrderPaid)
+        {
             this.dateOrderPaid = dateOrderPaid;
             return this;
         }
 
-        public Builder totalOrderPrice(BigDecimal totalOrderPrice) {
+        public Builder totalOrderPrice(BigDecimal totalOrderPrice)
+        {
             this.totalOrderPrice = totalOrderPrice;
             return this;
         }
 
-        public Builder orderProductList(List<OrderProduct> orderProductList) {
+        public Builder orderProductList(List<OrderProduct> orderProductList)
+        {
             this.orderProductList = orderProductList;
             return this;
         }
 
-        public Builder copy(Orders order) {
+        public Builder copy(Orders order)
+        {
             this.id = order.id;
             this.orderStatus = order.orderStatus;
             this.dateOrderPlaced = order.dateOrderPlaced;
@@ -111,19 +126,21 @@ public class Orders implements Serializable{
             return this;
         }
 
-        public Orders build() {
+        public Orders build()
+        {
             return new Orders(this);
         }
-
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
         return id != null ? id.hashCode() : 0;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Orders{" +
                 "id=" + id +
                 ", orderStatus='" + orderStatus + '\'' +
@@ -133,6 +150,5 @@ public class Orders implements Serializable{
                 ", orderProductList=" + orderProductList +
                 '}';
     }
-
 }
 

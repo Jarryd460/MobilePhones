@@ -18,15 +18,16 @@ package za.ac.cput.MobilePhones.repository;
 
 @SpringApplicationConfiguration(classes= App.class)
 @WebAppConfiguration
-public class OrdersCrudTest extends AbstractTestNGSpringContextTests {
-
+public class OrdersCrudTest extends AbstractTestNGSpringContextTests
+{
     private Long id;
 
     @Autowired
     OrdersRepository repository;
 
     @Test
-    public void testCreate() throws Exception {
+    public void testCreate() throws Exception
+    {
         repository.deleteAll();
         Orders order = OrdersFactory.createOrders("Confirmed", "2015-10-10", "2015-10-10", new BigDecimal(200), null);
         repository.save(order);
@@ -35,13 +36,15 @@ public class OrdersCrudTest extends AbstractTestNGSpringContextTests {
     }
 
     @Test(dependsOnMethods = "testCreate")
-    public void testRead() throws Exception {
+    public void testRead() throws Exception
+    {
         Orders order = repository.findOne(id);
         Assert.assertEquals(order.getOrderStatus(), "Confirmed");
     }
 
     @Test(dependsOnMethods = "testRead")
-    public void testUpdate() throws Exception {
+    public void testUpdate() throws Exception
+    {
         Orders order = repository.findOne(id);
         Orders newOrder = new Orders.Builder(order.getOrderStatus()).copy(order).dateOrderPaid("2015-10-15").build();
         repository.save(newOrder);
@@ -50,12 +53,12 @@ public class OrdersCrudTest extends AbstractTestNGSpringContextTests {
     }
 
     @Test(dependsOnMethods = "testUpdate")
-    public void testDelete() throws Exception {
+    public void testDelete() throws Exception
+    {
         Orders order = repository.findOne(id);
         repository.delete(order);
         Orders newOrder = repository.findOne(id);
         Assert.assertNull(newOrder);
     }
-
 }
 
