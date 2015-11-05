@@ -80,6 +80,7 @@ public class CustomerPage {
                 .contact(customer.getContact())
                 .address(customer.getAddress())
                 .orderList(customer.getOrderList())
+                .login(customer.getLogin())
                 .build();
         service.edit(updatedCustomer);
         return new ResponseEntity<Customer>(updatedCustomer, HttpStatus.OK);

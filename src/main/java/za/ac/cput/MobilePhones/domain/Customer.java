@@ -25,6 +25,8 @@ public class Customer implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name="customer_id")
     private List<Orders> orderList;
+    @Embedded
+    private Login login;
 
     private Customer() {}
 
@@ -36,6 +38,7 @@ public class Customer implements Serializable {
         this.contact = builder.contact;
         this.address = builder.address;
         this.orderList = builder.orderList;
+        this.login = builder.login;
     }
 
     public Long getId() {
@@ -66,6 +69,10 @@ public class Customer implements Serializable {
         return orderList;
     }
 
+    public Login getLogin() {
+        return login;
+    }
+
     public static class Builder {
 
         private Long id;
@@ -75,6 +82,7 @@ public class Customer implements Serializable {
         private Contact contact;
         private Address address;
         private List<Orders> orderList;
+        private Login login;
 
         public Builder(Name name) {
             this.name = name;
@@ -115,6 +123,11 @@ public class Customer implements Serializable {
             return this;
         }
 
+        public Builder login(Login login) {
+            this.login = login;
+            return this;
+        }
+
         public Builder copy(Customer customer) {
             this.id = customer.id;
             this.name = customer.name;
@@ -123,6 +136,7 @@ public class Customer implements Serializable {
             this.contact = customer.contact;
             this.address = customer.address;
             this.orderList = customer.orderList;
+            this.login = customer.login;
             return this;
         }
 
@@ -147,6 +161,7 @@ public class Customer implements Serializable {
                 ", contact=" + contact +
                 ", address=" + address +
                 ", orderList=" + orderList +
+                ", login=" + login +
                 '}';
     }
 
