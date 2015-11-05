@@ -2,87 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc9860fe-b69c-4cec-aab1-6b795c7b2be7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/domain/Address$Builder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/domain/Address.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/conf/factory/AddressFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/domain/AddressTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/App.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/AppTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/domain/Contact$Builder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/domain/Contact.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/conf/factory/ContactFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/domain/ContactTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/domain/Customer$Builder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/domain/Customer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/repository/CustomerCrudTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/conf/factory/CustomerFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/api/CustomerPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/repository/CustomerRepository.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/services/CustomerService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/services/impl/CustomerServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/services/CustomerServiceTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/domain/CustomerTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/api/HomePage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/api/LandingPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/domain/Name$Builder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/domain/Name.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/conf/factory/NameFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/domain/NameTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/domain/OrderProduct$Builder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/domain/OrderProduct.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/repository/OrderProductCrudTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/conf/factory/OrderProductFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/api/OrderProductPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/repository/OrderProductRepository.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/services/OrderProductService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/services/impl/OrderProductServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/services/OrderProductServiceTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/domain/OrderProductTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/domain/Orders$Builder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/domain/Orders.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/repository/OrdersCrudTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/conf/factory/OrdersFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/api/OrdersPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/repository/OrdersRepository.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/services/OrdersService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/services/impl/OrdersServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/services/OrdersServiceTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/domain/OrdersTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/domain/Product$Builder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/domain/Product.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/repository/ProductCrudTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/conf/factory/ProductFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/api/ProductPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/domain/ProductPrice$Builder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/domain/ProductPrice.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/repository/ProductPriceCrudTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/conf/factory/ProductPriceFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/api/ProductPricePage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/repository/ProductPriceRepository.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/services/ProductPriceService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/services/impl/ProductPriceServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/services/ProductPriceServiceTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/domain/ProductPriceTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/repository/ProductRepository.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/services/ProductService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/services/impl/ProductServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/services/ProductServiceTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/domain/ProductTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/za/ac/cput/MobilePhones/services/Services.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/za/ac/cput/MobilePhones/domain/TestSuite.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.openshift/action_hooks/deploy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.openshift/action_hooks/start" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.openshift/action_hooks/stop" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/MobilePhones/App.java" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/MobilePhones/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/MobilePhones/services/CustomerServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/MobilePhones/services/CustomerServiceTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MobilePhones.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,7 +34,18 @@
     <favorites_list name="MobilePhones" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8086522" vertical-offset="0" max-vertical-offset="601">
+              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -712,16 +643,16 @@
       <updated>1445449127107</updated>
       <workItem from="1445449138166" duration="1603000" />
       <workItem from="1445766264161" duration="1198000" />
-      <workItem from="1446743437533" duration="2067000" />
+      <workItem from="1446743437533" duration="2685000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4868000" />
+    <option name="totallyTimeSpent" value="5486000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1" width="1368" height="749" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -744,7 +675,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -962,8 +893,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20965058" vertical-offset="0" max-vertical-offset="601">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.8086522" vertical-offset="0" max-vertical-offset="601">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
           <folding />
         </state>
       </provider>
