@@ -32,7 +32,7 @@ public class CustomerServiceTest extends AbstractTestNGSpringContextTests {
 
     @Test
     public void create() throws Exception {
-        //repository.deleteAll();
+        repository.deleteAll();
         Orders order = OrdersFactory.createOrders("Confirmed", "2015-10-10", "2015-10-10", new BigDecimal(200), null);
         List<Orders> ordersList = new ArrayList<Orders>();
         ordersList.add(order);
@@ -72,7 +72,7 @@ public class CustomerServiceTest extends AbstractTestNGSpringContextTests {
     @Test(dependsOnMethods = "testEditCustomer")
     public void testDeleteCustomer() throws Exception {
         Customer customer = repository.findOne(id);
-        //service.delete(customer);
+        service.delete(customer);
         Customer newCustomer = repository.findOne(id);
         Assert.assertNull(newCustomer);
     }
