@@ -27,6 +27,7 @@ public class Customer implements Serializable {
     private List<Orders> orderList;
     @Embedded
     private Login login;
+    private String isAdmin;
 
     private Customer() {}
 
@@ -39,6 +40,7 @@ public class Customer implements Serializable {
         this.address = builder.address;
         this.orderList = builder.orderList;
         this.login = builder.login;
+        this.isAdmin = builder.isAdmin;
     }
 
     public Long getId() {
@@ -73,6 +75,10 @@ public class Customer implements Serializable {
         return login;
     }
 
+    public String getIsAdmin() {
+        return isAdmin;
+    }
+
     public static class Builder {
 
         private Long id;
@@ -83,6 +89,7 @@ public class Customer implements Serializable {
         private Address address;
         private List<Orders> orderList;
         private Login login;
+        private String isAdmin;
 
         public Builder(Name name) {
             this.name = name;
@@ -128,6 +135,11 @@ public class Customer implements Serializable {
             return this;
         }
 
+        public Builder isAdmin(String isAdmin) {
+            this.isAdmin = isAdmin;
+            return this;
+        }
+
         public Builder copy(Customer customer) {
             this.id = customer.id;
             this.name = customer.name;
@@ -137,6 +149,7 @@ public class Customer implements Serializable {
             this.address = customer.address;
             this.orderList = customer.orderList;
             this.login = customer.login;
+            this.isAdmin = customer.isAdmin;
             return this;
         }
 
@@ -162,6 +175,7 @@ public class Customer implements Serializable {
                 ", address=" + address +
                 ", orderList=" + orderList +
                 ", login=" + login +
+                ", isAdmin='" + isAdmin + '\'' +
                 '}';
     }
 

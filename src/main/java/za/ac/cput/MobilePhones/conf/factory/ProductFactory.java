@@ -12,8 +12,8 @@ import java.util.List;
  */
 public class ProductFactory {
 
-    public static Product createProduct(String name, String manufacturer, BigDecimal price, String operatingSystem, String screenSize, String touchScreen, String camera, String memory, List<OrderProduct> orderProductList, List<ProductPrice> productPriceList) {
-        return new Product.Builder(name).manufacturer(manufacturer).price(price).operatingSystem(operatingSystem).screenSize(screenSize).touchScreen(touchScreen).camera(camera).memory(memory).orderProductList(orderProductList).productPriceList(productPriceList).build();
+    public static Product createProduct(String name, String manufacturer, BigDecimal price, String operatingSystem, String screenSize, String touchScreen, String camera, String memory, List<OrderProduct> orderProductList, List<ProductPrice> productPriceList, byte[] picture) {
+        return new Product.Builder(name).manufacturer(manufacturer).price(price).operatingSystem(operatingSystem).screenSize(screenSize).touchScreen(touchScreen).camera(camera).memory(memory).orderProductList(orderProductList).productPriceList(productPriceList).picture(picture).build();
     }
 
 }

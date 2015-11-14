@@ -9,8 +9,8 @@ import java.util.List;
  */
 public class CustomerFactory {
 
-    public static Customer createCustomer(Name name, String sex, String dateOfBirth, Contact contact, Address address, List<Orders>orderList, Login login) {
-        return new Customer.Builder(name).sex(sex).dateOfBirth(dateOfBirth).contact(contact).address(address).orderList(orderList).login(login).build();
+    public static Customer createCustomer(Name name, String sex, String dateOfBirth, Contact contact, Address address, List<Orders>orderList, Login login, String isAdmin) {
+        return new Customer.Builder(name).sex(sex).dateOfBirth(dateOfBirth).contact(contact).address(address).orderList(orderList).login(login).isAdmin(isAdmin).build();
     }
 
 }

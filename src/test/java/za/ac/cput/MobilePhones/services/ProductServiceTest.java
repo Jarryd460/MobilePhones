@@ -31,7 +31,7 @@ public class ProductServiceTest extends AbstractTestNGSpringContextTests {
     @Test
     public void create() throws Exception {
         repository.deleteAll();
-        Product product = ProductFactory.createProduct("Note 5", "Samsung", new BigDecimal(10500), "Android Lollipop 5.1", "120*50", "Yes", "15", "32", null, null);
+        Product product = ProductFactory.createProduct("Note 5", "Samsung", new BigDecimal(10500), "Android Lollipop 5.1", "120*50", "Yes", "15", "32", null, null, null);
         service.create(product);
         id = product.getId();
         Assert.assertNotNull(product);

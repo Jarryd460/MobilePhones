@@ -3,6 +3,7 @@ package za.ac.cput.MobilePhones.domain;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -29,6 +30,8 @@ public class Product implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name="product_id")
     private List<ProductPrice> productPriceList;
+    @Lob
+    private byte[] picture;
 
     private Product() {}
 
@@ -44,6 +47,7 @@ public class Product implements Serializable {
         this.memory = builder.memory;
         this.orderProductList = builder.orderProductList;
         this.productPriceList = builder.productPriceList;
+        this.picture = builder.picture;
     }
 
     public Long getId() {
@@ -90,6 +94,10 @@ public class Product implements Serializable {
         return productPriceList;
     }
 
+    public byte[] getPicture() {
+        return picture;
+    }
+
     public static class Builder {
 
         private Long id;
@@ -103,6 +111,7 @@ public class Product implements Serializable {
         private String memory;
         private List<OrderProduct> orderProductList;
         private List<ProductPrice> productPriceList;
+        private byte[] picture;
 
         public Builder(String name) {
             this.name = name;
@@ -163,6 +172,11 @@ public class Product implements Serializable {
             return this;
         }
 
+        public Builder picture(byte[] picture) {
+            this.picture = picture;
+            return this;
+        }
+
         public Builder copy(Product product) {
             this.id = product.id;
             this.name = product.name;
@@ -175,6 +189,7 @@ public class Product implements Serializable {
             this.memory = product.memory;
             this.orderProductList = product.orderProductList;
             this.productPriceList = product.productPriceList;
+            this.picture = product.picture;
             return this;
         }
 
@@ -203,6 +218,7 @@ public class Product implements Serializable {
                 ", memory='" + memory + '\'' +
                 ", orderProductList=" + orderProductList +
                 ", productPriceList=" + productPriceList +
+                ", picture=" + Arrays.toString(picture) +
                 '}';
     }
 

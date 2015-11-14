@@ -78,6 +78,7 @@ public class ProductPage {
                 .memory(product.getMemory())
                 .orderProductList(product.getOrderProductList())
                 .productPriceList(product.getProductPriceList())
+                .picture(product.getPicture())
                 .build();
         service.edit(updatedProduct);
         return new ResponseEntity<Product>(updatedProduct, HttpStatus.OK);
