@@ -29,7 +29,7 @@ public class CustomerCrudTest extends AbstractTestNGSpringContextTests {
     @Test
     public void testCreate() throws Exception {
         repository.deleteAll();
-        Customer customer = CustomerFactory.createCustomer(NameFactory.createName("Sally", "Lee", "Abrahams"), "Female", "2015-10-13", ContactFactory.createContact("0219807439", "0829431236"), AddressFactory.createAddress("452 Sasol Street", "", "", ""), null, null, null);
+        Customer customer = CustomerFactory.createCustomer(NameFactory.createName("Sally", "Lee", "Abrahams"), "Female", "2015-10-13", ContactFactory.createContact("0219807439", "0829431236"), AddressFactory.createAddress("452 Sasol Street", "", "", ""), null, null, null, null);
         repository.save(customer);
         id = customer.getId();
         Assert.assertNotNull(customer.getId());

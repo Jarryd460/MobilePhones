@@ -82,6 +82,7 @@ public class CustomerPage {
                 .orderList(customer.getOrderList())
                 .login(customer.getLogin())
                 .isAdmin(customer.getIsAdmin())
+                .picture(customer.getPicture())
                 .build();
         service.edit(updatedCustomer);
         return new ResponseEntity<Customer>(updatedCustomer, HttpStatus.OK);

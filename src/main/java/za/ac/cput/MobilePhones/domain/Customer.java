@@ -2,6 +2,7 @@ package za.ac.cput.MobilePhones.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -28,6 +29,7 @@ public class Customer implements Serializable {
     @Embedded
     private Login login;
     private String isAdmin;
+    private byte[] picture;
 
     private Customer() {}
 
@@ -41,6 +43,7 @@ public class Customer implements Serializable {
         this.orderList = builder.orderList;
         this.login = builder.login;
         this.isAdmin = builder.isAdmin;
+        this.picture = builder.picture;
     }
 
     public Long getId() {
@@ -79,6 +82,10 @@ public class Customer implements Serializable {
         return isAdmin;
     }
 
+    public byte[] getPicture() {
+        return picture;
+    }
+
     public static class Builder {
 
         private Long id;
@@ -90,6 +97,7 @@ public class Customer implements Serializable {
         private List<Orders> orderList;
         private Login login;
         private String isAdmin;
+        private byte[] picture;
 
         public Builder(Name name) {
             this.name = name;
@@ -140,6 +148,11 @@ public class Customer implements Serializable {
             return this;
         }
 
+        public Builder picture(byte[] picture) {
+            this.picture = picture;
+            return this;
+        }
+
         public Builder copy(Customer customer) {
             this.id = customer.id;
             this.name = customer.name;
@@ -150,6 +163,7 @@ public class Customer implements Serializable {
             this.orderList = customer.orderList;
             this.login = customer.login;
             this.isAdmin = customer.isAdmin;
+            this.picture = customer.picture;
             return this;
         }
 
@@ -176,6 +190,7 @@ public class Customer implements Serializable {
                 ", orderList=" + orderList +
                 ", login=" + login +
                 ", isAdmin='" + isAdmin + '\'' +
+                ", picture=" + Arrays.toString(picture) +
                 '}';
     }
 

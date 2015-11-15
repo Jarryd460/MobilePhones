@@ -36,7 +36,7 @@ public class CustomerServiceTest extends AbstractTestNGSpringContextTests {
         Orders order = OrdersFactory.createOrders("Confirmed", "2015-10-10", "2015-10-10", new BigDecimal(200), null);
         List<Orders> ordersList = new ArrayList<Orders>();
         ordersList.add(order);
-        Customer customer = CustomerFactory.createCustomer(NameFactory.createName("Sally", "Lee", "Abrahams"), "Female", "2015-10-13", ContactFactory.createContact("0219807439", "0829431236"), AddressFactory.createAddress("452 Sasol Street", "", "", ""), ordersList, null, null);
+        Customer customer = CustomerFactory.createCustomer(NameFactory.createName("Sally", "Lee", "Abrahams"), "Female", "2015-10-13", ContactFactory.createContact("0219807439", "0829431236"), AddressFactory.createAddress("452 Sasol Street", "", "", ""), ordersList, null, null, null);
         service.create(customer);
         id = customer.getId();
         Assert.assertNotNull(customer);
