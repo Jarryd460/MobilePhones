@@ -203,5 +203,22 @@ public class Product implements Serializable {
         return id != null ? id.hashCode() : 0;
     }
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", price=" + price +
+                ", operatingSystem='" + operatingSystem + '\'' +
+                ", screenSize='" + screenSize + '\'' +
+                ", touchScreen='" + touchScreen + '\'' +
+                ", camera='" + camera + '\'' +
+                ", memory='" + memory + '\'' +
+                ", orderProductList=" + orderProductList +
+                ", productPriceList=" + productPriceList +
+                ", picture=" + picture +
+                '}';
+    }
 
 }

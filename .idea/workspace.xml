@@ -51,21 +51,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/MobilePhones/domain/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6854369" vertical-offset="2365" max-vertical-offset="2880">
-              <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2583" max-vertical-offset="3150">
+              <caret line="192" column="31" selection-start-line="192" selection-start-column="31" selection-end-line="192" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Product.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/MobilePhones/domain/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2725" max-vertical-offset="3240">
-              <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.65048546" vertical-offset="3031" max-vertical-offset="3546">
+              <caret line="220" column="20" selection-start-line="220" selection-start-column="20" selection-end-line="220" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -95,8 +95,8 @@
         <option value="$PROJECT_DIR$/src/test/java/za/ac/cput/MobilePhones/domain/CustomerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/za/ac/cput/MobilePhones/repository/CustomerCrudTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/za/ac/cput/MobilePhones/services/CustomerServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/MobilePhones/domain/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/MobilePhones/domain/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/MobilePhones/domain/Product.java" />
       </list>
     </option>
   </component>
@@ -721,12 +721,12 @@
       <workItem from="1447606705041" duration="479000" />
       <workItem from="1447695039770" duration="363000" />
       <workItem from="1447696500575" duration="751000" />
-      <workItem from="1447699940242" duration="838000" />
+      <workItem from="1447699940242" duration="1081000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12416000" />
+    <option name="totallyTimeSpent" value="12659000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1" width="1368" height="663" extended-state="6" />
@@ -1134,18 +1134,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/MobilePhones/domain/Product.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/MobilePhones/domain/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2725" max-vertical-offset="3240">
-          <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2583" max-vertical-offset="3150">
+          <caret line="192" column="31" selection-start-line="192" selection-start-column="31" selection-end-line="192" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/MobilePhones/domain/Customer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/MobilePhones/domain/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6854369" vertical-offset="2365" max-vertical-offset="2880">
-          <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.65048546" vertical-offset="3031" max-vertical-offset="3546">
+          <caret line="220" column="20" selection-start-line="220" selection-start-column="20" selection-end-line="220" selection-end-column="20" />
           <folding />
         </state>
       </provider>
