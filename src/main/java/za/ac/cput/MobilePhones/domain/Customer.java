@@ -29,6 +29,7 @@ public class Customer implements Serializable {
     @Embedded
     private Login login;
     private String isAdmin;
+    @Lob
     private byte[] picture;
 
     private Customer() {}
