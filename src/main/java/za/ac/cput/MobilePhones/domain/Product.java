@@ -3,7 +3,6 @@ package za.ac.cput.MobilePhones.domain;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -204,22 +203,5 @@ public class Product implements Serializable {
         return id != null ? id.hashCode() : 0;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", manufacturer='" + manufacturer + '\'' +
-                ", price=" + price +
-                ", operatingSystem='" + operatingSystem + '\'' +
-                ", screenSize='" + screenSize + '\'' +
-                ", touchScreen='" + touchScreen + '\'' +
-                ", camera='" + camera + '\'' +
-                ", memory='" + memory + '\'' +
-                ", orderProductList=" + orderProductList +
-                ", productPriceList=" + productPriceList +
-                ", picture=" + Arrays.toString(picture) +
-                '}';
-    }
 
 }

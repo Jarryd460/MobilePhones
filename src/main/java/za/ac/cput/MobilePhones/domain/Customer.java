@@ -2,7 +2,6 @@ package za.ac.cput.MobilePhones.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -179,20 +178,5 @@ public class Customer implements Serializable {
         return id != null ? id.hashCode() : 0;
     }
 
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "id=" + id +
-                ", name=" + name +
-                ", sex='" + sex + '\'' +
-                ", dateOfBirth='" + dateOfBirth + '\'' +
-                ", contact=" + contact +
-                ", address=" + address +
-                ", orderList=" + orderList +
-                ", login=" + login +
-                ", isAdmin='" + isAdmin + '\'' +
-                ", picture=" + Arrays.toString(picture) +
-                '}';
-    }
 
 }
