@@ -1,8 +1,11 @@
 package za.ac.cput.MobilePhones.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -29,7 +32,9 @@ public class Product implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name="product_id")
     private List<ProductPrice> productPriceList;
+    private String pictureExtension;
     @Lob
+    @JsonIgnore
     private byte[] picture;
 
     private Product() {}
@@ -46,6 +51,7 @@ public class Product implements Serializable {
         this.memory = builder.memory;
         this.orderProductList = builder.orderProductList;
         this.productPriceList = builder.productPriceList;
+        this.pictureExtension = builder.pictureExtension;
         this.picture = builder.picture;
     }
 
@@ -93,6 +99,10 @@ public class Product implements Serializable {
         return productPriceList;
     }
 
+    public String getPictureExtension() {
+        return pictureExtension;
+    }
+
     public byte[] getPicture() {
         return picture;
     }
@@ -110,6 +120,7 @@ public class Product implements Serializable {
         private String memory;
         private List<OrderProduct> orderProductList;
         private List<ProductPrice> productPriceList;
+        private String pictureExtension;
         private byte[] picture;
 
         public Builder(String name) {
@@ -171,6 +182,11 @@ public class Product implements Serializable {
             return this;
         }
 
+        public Builder pictureExtension(String pictureExtension) {
+            this.pictureExtension = pictureExtension;
+            return this;
+        }
+
         public Builder picture(byte[] picture) {
             this.picture = picture;
             return this;
@@ -188,6 +204,7 @@ public class Product implements Serializable {
             this.memory = product.memory;
             this.orderProductList = product.orderProductList;
             this.productPriceList = product.productPriceList;
+            this.pictureExtension = product.pictureExtension;
             this.picture = product.picture;
             return this;
         }
@@ -217,7 +234,8 @@ public class Product implements Serializable {
                 ", memory='" + memory + '\'' +
                 ", orderProductList=" + orderProductList +
                 ", productPriceList=" + productPriceList +
-                ", picture=" + picture +
+                ", pictureExtension='" + pictureExtension + '\'' +
+                ", picture=" + Arrays.toString(picture) +
                 '}';
     }
 

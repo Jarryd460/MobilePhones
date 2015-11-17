@@ -1,16 +1,20 @@
 package za.ac.cput.MobilePhones.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.util.UriComponentsBuilder;
 import za.ac.cput.MobilePhones.domain.Customer;
 import za.ac.cput.MobilePhones.domain.Orders;
 import za.ac.cput.MobilePhones.services.CustomerService;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -82,7 +86,6 @@ public class CustomerPage {
                 .orderList(customer.getOrderList())
                 .login(customer.getLogin())
                 .isAdmin(customer.getIsAdmin())
-                .picture(customer.getPicture())
                 .build();
         service.edit(updatedCustomer);
         return new ResponseEntity<Customer>(updatedCustomer, HttpStatus.OK);
@@ -100,6 +103,60 @@ public class CustomerPage {
 
         service.delete(customer);
         return new ResponseEntity<Customer>(HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/customer/setPicture/{id}", method = RequestMethod.PUT)
+    public ResponseEntity<Customer> setPicture(@PathVariable("id") long id, @RequestParam("pictureExtension") String pictureExtension, @RequestParam("picture") MultipartFile file) {
+        Customer currentCustomer = service.findById(id);
+
+        if(currentCustomer == null) {
+            return new ResponseEntity<Customer>(HttpStatus.NOT_FOUND);
+        }
+
+        try {
+            Customer updatedCustomer = new Customer.Builder(currentCustomer.getName())
+                    .copy(currentCustomer)
+                    .pictureExtension(pictureExtension)
+                    .picture(file.getBytes())
+                    .build();
+
+            service.edit(updatedCustomer);
+            return new ResponseEntity<Customer>(updatedCustomer, HttpStatus.OK);
+        } catch (IOException e) {
+            return new ResponseEntity<Customer>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @RequestMapping(value = "/customer/getPicture/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<InputStreamResource> getPicture(@PathVariable long id) {
+        Customer customer = service.findById(id);
+
+        if (customer == null || customer.getPicture() == null) {
+            return new ResponseEntity<InputStreamResource>(HttpStatus.NOT_FOUND);
+        }
+
+        return ResponseEntity.ok()
+                .contentLength(customer.getPicture().length)
+                .contentType(MediaType.parseMediaType(customer.getPictureExtension()))
+                .body(new InputStreamResource(new ByteArrayInputStream(customer.getPicture())));
+    }
+
+    @RequestMapping(value = "/customer/removePicture/{id}", method = RequestMethod.PUT)
+    public ResponseEntity<Customer> removePicture(@PathVariable("id") long id) {
+        Customer currentCustomer = service.findById(id);
+        if (currentCustomer == null || currentCustomer.getPicture() == null) {
+            return new ResponseEntity<Customer>(HttpStatus.NOT_FOUND);
+        }
+
+        Customer updatedCustomer = new Customer.Builder(currentCustomer.getName())
+                .copy(currentCustomer)
+                .pictureExtension(null)
+                .picture(null)
+                .build();
+
+        service.edit(updatedCustomer);
+        return new ResponseEntity<Customer>(updatedCustomer, HttpStatus.OK);
     }
 
 }

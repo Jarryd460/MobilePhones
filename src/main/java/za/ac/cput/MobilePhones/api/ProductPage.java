@@ -1,15 +1,19 @@
 package za.ac.cput.MobilePhones.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.util.UriComponentsBuilder;
 import za.ac.cput.MobilePhones.domain.Product;
 import za.ac.cput.MobilePhones.services.ProductService;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -78,7 +82,6 @@ public class ProductPage {
                 .memory(product.getMemory())
                 .orderProductList(product.getOrderProductList())
                 .productPriceList(product.getProductPriceList())
-                .picture(product.getPicture())
                 .build();
         service.edit(updatedProduct);
         return new ResponseEntity<Product>(updatedProduct, HttpStatus.OK);
@@ -96,6 +99,60 @@ public class ProductPage {
 
         service.delete(product);
         return new ResponseEntity<Product>(HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/product/setPicture/{id}", method = RequestMethod.PUT)
+    public ResponseEntity<Product> setPicture(@PathVariable("id") long id, @RequestParam("pictureExtension") String pictureExtension, @RequestParam("picture") MultipartFile file) {
+        Product currentProduct = service.findById(id);
+
+        if(currentProduct == null) {
+            return new ResponseEntity<Product>(HttpStatus.NOT_FOUND);
+        }
+
+        try {
+            Product updatedProduct = new Product.Builder(currentProduct.getName())
+                    .copy(currentProduct)
+                    .pictureExtension(pictureExtension)
+                    .picture(file.getBytes())
+                    .build();
+
+            service.edit(updatedProduct);
+            return new ResponseEntity<Product>(updatedProduct, HttpStatus.OK);
+        } catch (IOException e) {
+            return new ResponseEntity<Product>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @RequestMapping(value = "/product/getPicture/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<InputStreamResource> getPicture(@PathVariable long id) {
+        Product product = service.findById(id);
+
+        if (product == null || product.getPicture() == null) {
+            return new ResponseEntity<InputStreamResource>(HttpStatus.NOT_FOUND);
+        }
+
+        return ResponseEntity.ok()
+                .contentLength(product.getPicture().length)
+                .contentType(MediaType.parseMediaType(product.getPictureExtension()))
+                .body(new InputStreamResource(new ByteArrayInputStream(product.getPicture())));
+    }
+
+    @RequestMapping(value = "/product/removePicture/{id}", method = RequestMethod.PUT)
+    public ResponseEntity<Product> removePicture(@PathVariable("id") long id) {
+        Product currentProduct = service.findById(id);
+        if (currentProduct == null || currentProduct.getPicture() == null) {
+            return new ResponseEntity<Product>(HttpStatus.NOT_FOUND);
+        }
+
+        Product updatedProduct = new Product.Builder(currentProduct.getName())
+                .copy(currentProduct)
+                .pictureExtension(null)
+                .picture(null)
+                .build();
+
+        service.edit(updatedProduct);
+        return new ResponseEntity<Product>(updatedProduct, HttpStatus.OK);
     }
 
 }
