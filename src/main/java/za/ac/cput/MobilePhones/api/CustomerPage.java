@@ -79,7 +79,7 @@ public class CustomerPage {
                 .Builder(currentCustomer.getName())
                 .copy(currentCustomer)
                 .name(customer.getName())
-                .sex(customer.getSex())
+                .demographic(customer.getDemographic())
                 .dateOfBirth(customer.getDateOfBirth())
                 .contact(customer.getContact())
                 .address(customer.getAddress())

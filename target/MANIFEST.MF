@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: MobilePhones
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: za.ac.cput.MobilePhones
+Build-Jdk: 1.7.0_75
+Built-By: student
+Created-By: IntelliJ IDEA
+Main-Class: ${start-class}
+

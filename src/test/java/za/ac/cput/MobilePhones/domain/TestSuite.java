@@ -12,6 +12,7 @@ package za.ac.cput.MobilePhones.domain;
         AddressTest.class,
         ContactTest.class,
         CustomerTest.class,
+        DemographicTest.class,
         NameTest.class,
         OrderProductTest.class,
         OrdersTest.class,

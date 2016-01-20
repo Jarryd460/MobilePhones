@@ -19,7 +19,8 @@ public class Customer implements Serializable {
     private Long id;
     @Embedded
     private Name name;
-    private String sex;
+    @Embedded
+    private Demographic demographic;
     private String dateOfBirth;
     @Embedded
     private Contact contact;
@@ -41,7 +42,7 @@ public class Customer implements Serializable {
     public Customer(Builder builder) {
         this.id = builder.id;
         this.name = builder.name;
-        this.sex = builder.sex;
+        this.demographic = builder.demographic;
         this.dateOfBirth = builder.dateOfBirth;
         this.contact = builder.contact;
         this.address = builder.address;
@@ -60,8 +61,8 @@ public class Customer implements Serializable {
         return name;
     }
 
-    public String getSex() {
-        return sex;
+    public Demographic getDemographic() {
+        return demographic;
     }
 
     public String getDateOfBirth() {
@@ -100,7 +101,7 @@ public class Customer implements Serializable {
 
         private Long id;
         private Name name;
-        private String sex;
+        private Demographic demographic;
         private String dateOfBirth;
         private Contact contact;
         private Address address;
@@ -124,8 +125,8 @@ public class Customer implements Serializable {
             return this;
         }
 
-        public Builder sex(String sex) {
-            this.sex = sex;
+        public Builder demographic(Demographic demographic) {
+            this.demographic = demographic;
             return this;
         }
 
@@ -172,7 +173,7 @@ public class Customer implements Serializable {
         public Builder copy(Customer customer) {
             this.id = customer.id;
             this.name = customer.name;
-            this.sex = customer.sex;
+            this.demographic = customer.demographic;
             this.dateOfBirth = customer.dateOfBirth;
             this.contact = customer.contact;
             this.address = customer.address;
@@ -200,7 +201,7 @@ public class Customer implements Serializable {
         return "Customer{" +
                 "id=" + id +
                 ", name=" + name +
-                ", sex='" + sex + '\'' +
+                ", demographic=" + demographic +
                 ", dateOfBirth='" + dateOfBirth + '\'' +
                 ", contact=" + contact +
                 ", address=" + address +

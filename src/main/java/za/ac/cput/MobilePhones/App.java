@@ -7,15 +7,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
- * Hello world!
- *
+ * Created by student on 2016/01/21.
  */
-
 @Configuration
 @ComponentScan
 @EnableWebMvc
 @EnableAutoConfiguration
-public class App 
+public class App
 {
     public static void main( String[] args )
     {
